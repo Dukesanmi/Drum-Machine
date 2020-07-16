@@ -1,7 +1,7 @@
 /*Necessary Global Variables*/
-var drumPads = document.querySelectorAll(".drum-pad");
-var iconS = document.querySelectorAll(".icons");
-var audioSound = document.querySelectorAll(".clip");
+var drumPads = document.getElementsByClassName("drum-pad");
+var iconS = document.getElementsByClassName(".icons");
+var audioSound = document.getElementsByClassName(".clip");
 var bank = initialBank();
 var power = false;
 
@@ -444,4 +444,3 @@ function bankChange() {
     }
   }
 }
-
