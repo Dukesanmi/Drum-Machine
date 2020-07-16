@@ -1,0 +1,533 @@
+body {
+		background-color: #000;
+	}
+	#icons-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 3em;
+	}
+
+	svg {
+		width: 40%;
+	}
+	.icons {
+		fill: rgba(192, 192, 192, 0.5);
+	}
+	#header-text {
+		text-align: center;
+		color: silver;
+		font-family: 'Orbitron'; 
+		font-size: 1.7em;
+		letter-spacing: 0.3em;
+		margin-top: -0.8em;
+	}
+	#drum-machine {
+		/*background-color: silver;*/
+		background-color: #3b3737;
+		border-style: solid;
+		border-color: #292929;
+		border-radius: 5%;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		padding: 3em;
+		margin: auto;
+		margin-top: 5.7em;
+	}
+	#display {
+		background-color: inherit;
+		display: flex;
+		flex-direction: column;
+		margin-left: -3em;
+		padding: 4em 6em;
+		color: #fafafa;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 4 15px 20px rgba(3, 252, 23, 0.19), 4 16px 6px rgba(3, 252, 23, 0.23);
+	}
+	#display > span {
+		font-family: 'VT323', monospace;
+		font-size: 1.4em;
+		text-align: center;
+		margin-bottom: 0.5em;
+		width: 80%;
+		box-shadow: 4 15px 20px rgba(3, 252, 23, 0.19), 4 16px 6px rgba(3, 252, 23, 0.23);
+	}
+
+	#drum-pad-container {
+		background-color: inherit;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0.5em;
+		max-width: 580px;
+		justify-content: center;
+		align-items: center;
+		margin-left: -40px;
+	}
+
+	.drum-pad {
+		font-family: 'SchoonSquare', monospace;
+		font-size: 1.5em;
+		font-weight: 700;
+		padding: 1em 1em;
+		width: 10%;
+		margin: auto 0.5em;
+		margin-bottom: 1em;
+		border-radius: 6%;
+		/*background-color: #436145;*/
+		background-color: #000;
+		/*background-color: #292929;*/
+		color: rgba(192, 192, 192, 0.5);
+		box-shadow: 0 15px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		cursor: pointer;
+		text-align: center;
+	}
+	#sound-type {
+		/*background-color: #03fc17 #424242;*/ 
+		/*background-color: #91d9fa- blue calc tv;*/
+		/*background-color: #97ff75;*/
+		background-color: rgba(192, 192, 192, 0.8);
+		color: #111;
+		padding: 0.5em 0.5em;
+		border-style: none;
+		border-color: #292929;
+		border-radius: 0;
+		letter-spacing: 0.2em;
+		box-shadow: 4 15px 20px rgba(3, 252, 23, 0.19), 4 16px 6px rgba(3, 252, 23, 0.23);
+	}
+	#power-btn {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 1em;
+	}
+	#power-btn > span {
+		margin-right: 1em;
+		font-family: 'SchoonSquare', monospace;
+		font-size: 1.6em;
+		box-shadow: 4 15px 20px rgba(0, 0, 0, 0.19), 4 16px 6px rgba(0, 0, 0, 0.23);
+	}
+	#kit-type-btn {
+		display: flex;
+		flex-direction: row;
+		margin-top: 1em;
+	}
+	#kit-type-btn > span {
+		font-family: 'SchoonSquare', monospace;
+		font-size: 1.6em;
+		margin-right: 1em;
+	}
+
+	/*togglers*/
+	.toggle {
+        position: relative;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    input[type="checkbox"].checkbox {
+        width: 40px;
+        height: 18px;
+        background: #555;
+        position: relative;
+        border-radius: 50px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        vertical-align: 2px;
+        outline: none;
+    }
+
+    input[type="checkbox"].checkbox:checked + label {
+        left: 16px;
+        color: rgba(3, 252, 23);
+    }
+
+    input[type="checkbox"].checkbox:focus-visible {
+        outline: solid 2px white;
+    }
+
+    input[type="checkbox"].checkbox + label {
+        display: inline-block;
+        width: 24px;
+        height: 16px;
+        margin-left: 0.5em;
+        border-radius: 19px;
+        transition: all 0.8s ease;
+        cursor: pointer;
+        position: absolute;
+        left: 3px;
+        opacity: 1;
+        background-color: #292929;
+    }
+
+    .toggle-container {
+        display: flex;
+        margin: 0 auto;
+        margin-right: 7px;
+        margin-top: -10px;
+    }
+
+    .toggle-container > span {
+        font-size: 0.8em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.5s ease;
+        margin-top: 4px;
+        margin-right: 1px;
+    }
+
+    .toggle-container > span:last-child {
+        margin-top: 5px;
+    }
+
+    label {
+    	text-align: center;
+    	color: #555;
+    }
+
+    /*Volume toggler*/
+    #volume-toggler {
+    	margin-top: 1em;
+    }
+	.volume-toggle {
+        position: relative;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    input[type="range"].volume-checkbox {
+        width: 190px;
+        height: 5px;
+        background: #555;
+        position: relative;
+        border-radius: 30px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        vertical-align: 2px;
+        outline: none;
+    }
+
+    input[type="range"].volume-checkbox:focus-visible {
+        outline: solid 2px white;
+    }
+
+    .volume-toggle-container {
+        display: flex;
+        margin: 0 auto;
+        margin-right: 10px;
+        margin-top: -10px;
+    }
+
+    .volume-toggle-container > span {
+        font-size: 0.8em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        margin-top: 4px;
+        margin-right: 2px;
+    }
+
+    .volume-toggle-container > span:last-child {
+        margin-top: 5px;
+
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 19px;
+        width: 19px;
+    }
+
+
+    /*----------------Media Queries------------*/
+    @media only screen and (max-width: 1350px) {
+
+	    #icons-container {
+		    margin-top: 1.5em;
+	    }
+
+	    svg {
+		    width: 15%;
+	    }
+
+	    #header-text { 
+		    font-size: 1.4em;
+	    }
+
+	    #drum-machine {
+		    width: 55%;
+		    padding: 2.5em;
+	    	margin-top: 4em;
+    	}
+
+    	#display {
+	    	margin-left: -4em;
+		    padding: 3em 6em;
+    	}
+	    
+	    #display > span {
+		    font-size: 1.25em;
+	    }
+
+	    #drum-pad-container {
+	     	padding: 0.5em;
+		    max-width: 380px;
+	    }
+
+     	.drum-pad {
+		    font-size: 1.35em;
+	    }
+
+	    #power-btn > span {
+		    font-size: 1.4em;
+	    }
+	    #kit-type-btn > span {
+		    font-size: 1.4em;
+	    }
+
+	    /*togglers*/
+        input[type="checkbox"].checkbox {
+            width: 37px;
+            height: 16px;
+        }
+
+        input[type="checkbox"].checkbox:checked + label {
+            left: 14px;
+        }
+
+        input[type="checkbox"].checkbox + label {
+            width: 21px;
+            height: 14px;
+            margin-left: 0.6em;
+            border-radius: 18px;
+        }
+
+        #power-symbol {
+        	font-size: 90%;
+        }
+
+        /*Volume toggler*/
+        input[type="range"].volume-checkbox {
+            height: 4px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            height: 15px;
+            width: 15px;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 1150px) {
+	    #icons-container {
+		    margin-top: 1.6em;
+	    }
+
+	    svg {
+		    width: 45px;
+	    }
+
+	    #drum-machine {
+		    padding: 2.5em;
+	    	margin-top: 5em;
+	    	/*margin-left: 8.5em;*/
+    	}
+
+    	#display {
+		    padding: 2em 4em;
+    	}
+
+	    #display > span {
+		    font-size: 1.18em;
+	    }
+
+	    #drum-pad-container {
+	     	padding: 0.3em;
+		    max-width: 340px;
+	    }
+
+     	.drum-pad {
+		    font-size: 1.15em;
+	    }
+	    #power-btn {
+		    margin-bottom: 0.9em;
+	    }
+	    #power-btn > span {
+		    margin-right: 0.4em;
+	    }
+	    #kit-type-btn {
+		    margin-top: 0.9em;
+	    }
+	    #kit-type-btn > span {
+		    margin-right: 0.4em;
+	    }
+
+        /*Volume toggler*/
+        input[type="range"].volume-checkbox {
+            width: 160px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            height: 13px;
+            width: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {     	
+	    #icons-container {
+		    display: none;
+	    }
+
+	    #header-text {
+		    font-size: 1.3em;
+	    }
+	    #drum-machine {
+		    flex-direction: column-reverse;
+		    width: 39%;
+		    margin-top: 3.6em;
+		    border-radius: 0;
+	    }
+	    #display {
+		    margin-left: 0em;
+		    padding: 2em 2em;
+	    }
+
+	    #display > span {
+		    font-size: 1.1em;
+	    }
+    	#drum-pad-container {
+	    	padding: 0.5em;
+		    max-width: 480px;
+		    margin-left: -30px;
+	    }
+
+	    .drum-pad {
+		    font-size: 1.3em;
+		    padding: 0.7em 0.7em;
+	    }
+
+    	#power-btn > span {
+	    	font-size: 1.2em;
+	    }
+
+	    #kit-type-btn {
+		    margin-top: 1em;
+	    }
+
+	    #kit-type-btn > span {
+		    font-size: 1.2em;
+	    }
+
+	    /*togglers*/
+        input[type="checkbox"].checkbox {
+            width: 32px;
+            height: 14px;
+        }
+
+        input[type="checkbox"].checkbox:checked + label {
+            left: 10.5px;
+        }
+
+        input[type="checkbox"].checkbox + label {
+            width: 19px;
+            height: 10px;
+            margin-left: 0.8em;
+        }
+
+        input[type="checkbox"].checkboxBank + label {
+            width: 19px;
+            height: 10.5px;
+            margin-left: 0.7em;
+        }
+        #power-symbol {
+            font-size: 73%;
+        }
+
+        /*Volume toggler*/
+        input[type="range"].volume-checkbox {
+            width: 140px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            height: 12px;
+            width: 12px;
+        }
+
+    }
+
+    @media only screen and (max-width: 650px) {
+	    #header-text {
+		    font-size: 1em;
+	    }
+	    #drum-machine {
+		    width: 45%;
+		    padding: 1em;
+	    }
+	    #display {
+		    margin-left: 0em;
+		    padding: 1em 1em;
+	    }
+	    #display > span {
+		    font-size: 0.8em;
+	    }
+	    #drum-pad-container {
+		    padding: 0;
+		    max-width: 480px;
+		    margin-left: 0px;
+	    }
+
+	    .drum-pad {
+		    font-size: 1em;
+	    }
+
+	    #power-btn > span {
+		    font-size: 1em;
+	    }
+	    #kit-type-btn > span {
+		    font-size: 1em;
+	    }
+
+	    /*togglers*/
+        input[type="checkbox"].checkbox {
+            width: 32px;
+            height: 13px;
+            vertical-align: 2px;
+        }
+
+        input[type="checkbox"].checkbox + label {
+            height: 10px;
+        }
+
+        input[type="checkbox"].checkboxBank + label {
+            width: 19px;
+            height: 9.8px;
+            margin-top: 0.055px;
+        }
+
+        /*Volume toggler*/
+
+        input[type="range"].volume-checkbox {
+            width: 130px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            height: 11px;
+            width: 11px;
+        }
+
+    }
