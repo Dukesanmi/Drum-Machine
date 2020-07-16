@@ -199,8 +199,8 @@ if (power === false) {
   document.getElementById("kit-type-btn").style.cssText =
     "position: absolute; opacity: 0;";
 
-  for (var i = 0; i < audioSound.length; i++) {
-    audioSound[i].muted = true;
+  for (var j = 0; j < audioSound.length; j++) {
+    audioSound[j].muted = true;
   }
 }
 
@@ -228,18 +228,18 @@ function powerOff() {
     document.getElementById("bank").style.cssText =
       "color: rgb(255, 255, 255); transition: color 0.1s linear";
 
-    for (var i = 0; i < drumPads.length; i++) {
-      drumPads[i].style.cssText =
+    for (var k = 0; k < drumPads.length; k++) {
+      drumPads[k].style.cssText =
         "color: rgba(192, 192, 192, 0.5); transition: color 0.1s linear; transition: box-shadow 0.1s linear; box-shadow: 0 15px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);";
     }
 
-    for (var i = 0; i < iconS.length; i++) {
-      iconS[i].style.cssText =
+    for (var l = 0; l < iconS.length; l++) {
+      iconS[l].style.cssText =
         "fill: rgba(192, 192, 192, 0.5); transition: fill 0.1s linear";
     }
 
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].muted = true;
+    for (var m = 0; m < audioSound.length; m++) {
+      audioSound[m].muted = true;
     }
   } else if (power === true && bank === false) {
     document.getElementById("start-sound").muted = false;
@@ -257,18 +257,18 @@ function powerOff() {
     document.getElementById("bank").style.cssText =
       "color: rgba(3, 252, 23, 1); transition: color 0.8s linear";
 
-    for (var i = 0; i < drumPads.length; i++) {
-      drumPads[i].style.cssText =
+    for (var n = 0; n < drumPads.length; n++) {
+      drumPads[n].style.cssText =
         "color: rgba(3, 252, 23, 1); transition: color 0.8s linear; transition: box-shadow 2s linear; box-shadow: 0 5px 10px rgba(3, 252, 23, 0.19), 0 3px 3px rgba(3, 252, 23, 0.23);";
     }
 
-    for (var i = 0; i < iconS.length; i++) {
-      iconS[i].style.cssText =
+    for (var g = 0; g < iconS.length; g++) {
+      iconS[g].style.cssText =
         "fill: rgba(3, 252, 23, 1); transition: fill 0.8s linear";
     }
 
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].muted = false;
+    for (var h = 0; h < audioSound.length; h++) {
+      audioSound[h].muted = false;
     }
   } else if (power === true && bank === true) {
     document.getElementById("start-sound").muted = false;
@@ -287,21 +287,21 @@ function powerOff() {
     document.getElementById("bank").style.cssText =
       "color: rgba(0, 166, 255, 1); transition: color 0.8s linear";
 
-    for (var i = 0; i < drumPads.length; i++) {
-      drumPads[i].style.cssText =
+    for (var o = 0; o < drumPads.length; o++) {
+      drumPads[o].style.cssText =
         "color: rgba(0, 166, 255, 1); transition: color 0.8s linear; transition: box-shadow 3s linear; box-shadow: 0 5px 10px rgba(0, 166, 255, 0.19), 0 3px 3px rgba(0, 166, 255, 0.23);";
     }
 
-    for (var i = 0; i < iconS.length; i++) {
-      iconS[i].style.cssText =
+    for (var p = 0; p < iconS.length; p++) {
+      iconS[p].style.cssText =
         "fill: rgba(0, 166, 255, 1); transition: fill 0.8s linear";
     }
 
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].autoplay = false;
+    for (var q = 0; q < audioSound.length; q++) {
+      audioSound[q].autoplay = false;
     }
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].muted = false;
+    for (var r = 0; r < audioSound.length; r++) {
+      audioSound[r].muted = false;
     }
   }
 }
@@ -386,18 +386,18 @@ function bankChange() {
     document.getElementById("bank").style.cssText =
       "color: rgba(0, 166, 255, 1); transition: color 0.3s linear";
 
-    for (var i = 0; i < drumPads.length; i++) {
-      drumPads[i].style.cssText =
+    for (var a = 0; a < drumPads.length; a++) {
+      drumPads[a].style.cssText =
         "color: rgba(0, 166, 255, 1); transition: color 0.3s linear; transition: box-shadow 0.3s linear; box-shadow: 0 5px 10px rgba(0, 166, 255, 0.19), 0 3px 3px rgba(0, 166, 255, 0.23);";
     }
 
-    for (var i = 0; i < iconS.length; i++) {
-      iconS[i].style.cssText =
+    for (var b = 0; b < iconS.length; b++) {
+      iconS[b].style.cssText =
         "fill: rgba(0, 166, 255, 1); transition: fill 0.3s linear";
     }
 
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].autoplay = false;
+    for (var c = 0; c < audioSound.length; c++) {
+      audioSound[c].autoplay = false;
     }
   } else {
     document.getElementById("bank").innerHTML = "Bank 1";
@@ -429,18 +429,19 @@ function bankChange() {
     document.getElementById("bank").style.cssText =
       "color: rgba(3, 252, 23, 1); transition: color 0.3s linear";
 
-    for (var i = 0; i < drumPads.length; i++) {
-      drumPads[i].style.cssText =
+    for (var d = 0; d < drumPads.length; d++) {
+      drumPads[d].style.cssText =
         "color: rgba(3, 252, 23, 1); transition: color 0.3s linear; transition: box-shadow 0.3s linear; box-shadow: 0 5px 10px rgba(3, 252, 23, 0.19), 0 3px 3px rgba(3, 252, 23, 0.23);";
     }
 
-    for (var i = 0; i < iconS.length; i++) {
-      iconS[i].style.cssText =
+    for (var e = 0; e < iconS.length; e++) {
+      iconS[e].style.cssText =
         "fill: rgba(3, 252, 23, 1); transition: fill 0.3s linear";
     }
 
-    for (var i = 0; i < audioSound.length; i++) {
-      audioSound[i].muted = false;
+    for (var f = 0; f < audioSound.length; f++) {
+      audioSound[f].muted = false;
     }
   }
 }
+
